@@ -1,0 +1,107 @@
+{
+  "version": "1.0",
+  "updated": "2025-04-17",
+  "adminLinks": [
+    {
+      "id": "admin_1",
+      "title": "MDN Web Documentation",
+      "url": "https://developer.mozilla.org",
+      "category": "2D",
+      "tags": ["documentation", "web", "javascript"],
+      "dateAdded": "2025-04-15T00:00:00.000Z",
+      "adminId": "1",
+      "description": "Comprehensive web development documentation"
+    },
+    {
+      "id": "admin_2",
+      "title": "Three.js Documentation",
+      "url": "https://threejs.org/docs/",
+      "category": "3D",
+      "tags": ["3D", "javascript", "webgl"],
+      "dateAdded": "2025-04-15T00:00:00.000Z",
+      "adminId": "1",
+      "description": "Documentation for the Three.js 3D library"
+    },
+    {
+      "id": "admin_3",
+      "title": "Mapbox GL JS",
+      "url": "https://docs.mapbox.com/mapbox-gl-js",
+      "category": "Maps",
+      "tags": ["maps", "javascript", "geospatial"],
+      "dateAdded": "2025-04-15T00:00:00.000Z",
+      "adminId": "2",
+      "description": "Interactive, customizable maps"
+    },
+    {
+      "id": "admin_4",
+      "title": "OpenCV Documentation",
+      "url": "https://docs.opencv.org",
+      "category": "Vision",
+      "tags": ["computer vision", "image processing"],
+      "dateAdded": "2025-04-15T00:00:00.000Z",
+      "adminId": "3",
+      "description": "Open source computer vision library"
+    },
+    {
+      "id": "admin_5",
+      "title": "GitHub",
+      "url": "https://github.com",
+      "category": "Other",
+      "tags": ["code", "repository", "git"],
+      "dateAdded": "2025-04-15T00:00:00.000Z",
+      "adminId": "1",
+      "description": "Host and review code, manage projects"
+    },
+    {
+      "id": "admin_6",
+      "title": "Stereo Camera Calibration",
+      "url": "https://docs.opencv.org/master/d9/d0c/group__calib3d.html",
+      "category": "Logs review & Stereo",
+      "tags": ["stereo vision", "calibration", "logs"],
+      "dateAdded": "2025-04-15T00:00:00.000Z",
+      "adminId": "3",
+      "description": "Tools and techniques for stereo camera calibration"
+    },
+    {
+      "id": "admin_7",
+      "title": "Jenkins Documentation",
+      "url": "https://www.jenkins.io/doc/",
+      "category": "Automation",
+      "tags": ["CI/CD", "pipeline", "automation"],
+      "dateAdded": "2025-04-15T00:00:00.000Z",
+      "adminId": "2",
+      "description": "Automation server for building, testing, and deploying"
+    },
+    {
+      "id": "admin_8",
+      "title": "Flutter Documentation",
+      "url": "https://flutter.dev/docs",
+      "category": "PDA",
+      "tags": ["mobile", "cross-platform", "UI"],
+      "dateAdded": "2025-04-15T00:00:00.000Z", 
+      "adminId": "1",
+      "description": "Framework for building mobile applications"
+    },
+    {
+      "id": "admin_9",
+      "title": "TensorFlow Model Selection",
+      "url": "https://www.tensorflow.org/guide/keras/sequential_model",
+      "category": "Down selection",
+      "tags": ["ML", "model selection", "optimization"],
+      "dateAdded": "2025-04-15T00:00:00.000Z",
+      "adminId": "3",
+      "description": "Guide for selecting and optimizing machine learning models"
+    }
+  ],
+  "categories": [
+    "2D",
+    "3D",
+    "Maps",
+    "Vision",
+    "Logs review & Stereo",
+    "Automation",
+    "PDA",
+    "Down selection",
+    "Other"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Link Library: Smart Bookmark Manager",
+    "version": "1.0.0",
+    "description": "🔗 Link Organizer 🔍 Quick Search 📂 Category Manager 📤 Export/Import 🔄 Browser Sync 📱",
+    "permissions": ["storage", "bookmarks"],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "48": "icons/icon48.png",
+            "128": "icons/icon128.png"
+        }
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    }
+}

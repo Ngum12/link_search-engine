@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Library</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <h1>Link Library</h1>
+            <div class="header-controls">
+                <!-- Dark mode toggle moved to left -->
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider round"></span>
+                    <span class="mode-text">Dark Mode</span>
+                </label>
+                
+                <!-- Help button with instructions text moved to right -->
+                <div class="help-container">
+                    <button id="help-button" class="icon-button help-icon" title="Help & Instructions">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9.09 9C9.3251 8.33167 9.78915 7.76811 10.4 7.40913C11.0108 7.05016 11.7289 6.91894 12.4272 7.03871C13.1255 7.15849 13.7588 7.52152 14.2151 8.06353C14.6713 8.60553 14.9211 9.29152 14.92 10C14.92 12 11.92 13 11.92 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 17H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <span class="help-text">Instructions</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="search" placeholder="Search links...">
+        <select id="filter-category">
+            <option value="all">All Categories</option>
+            <option value="2D">2D</option>
+            <option value="3D">3D</option>
+            <option value="Maps">Maps</option>
+            <option value="Vision">Vision</option>
+            <option value="Logs review & Stereo">Logs review & Stereo</option>
+            <option value="Automation">Automation</option>
+            <option value="PDA">PDA</option>
+            <option value="Down selection">Down selection</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+
+    <div class="tabs">
+        <button class="tab-btn active" data-tab="browse">Browse</button>
+        <button class="tab-btn" data-tab="add">Add New</button>
+        <button class="tab-btn" data-tab="settings">Settings</button>
+    </div>
+
+    <div id="browse-tab" class="tab-content active">
+        <div id="categories-container"></div>
+    </div>
+
+    <div id="add-tab" class="tab-content">
+        <input type="text" id="link-title" placeholder="Enter link title...">
+        <input type="text" id="link-url" placeholder="Enter link URL...">
+        <select id="category">
+            <option value="2D">2D</option>
+            <option value="3D">3D</option>
+            <option value="Maps">Maps</option>
+            <option value="Vision">Vision</option>
+            <option value="Logs review & Stereo">Logs review & Stereo</option>
+            <option value="Automation">Automation</option>
+            <option value="PDA">PDA</option>
+            <option value="Down selection">Down selection</option>
+            <option value="Other">Other</option>
+        </select>
+        <input type="text" id="tags" placeholder="Tags (comma separated)">
+        <button id="add-link" class="primary-btn">Add Link</button>
+        <!-- Add this hidden field to store link ID during edit -->
+        <input type="hidden" id="link-id">
+        <div id="custom-category">
+            <input type="text" id="new-category" placeholder="Create new category">
+            <button id="add-category">Add Category</button>
+        </div>
+    </div>
+
+    <div id="settings-tab" class="tab-content">
+        <div class="setting-group">
+            <h3>Data Management</h3>
+            <button id="debug-storage" class="primary-btn">Debug Storage</button>
+            <button id="refresh-links" class="primary-btn">Refresh Links</button>
+            <button id="reset-data" class="danger-btn">Reset to Default Links</button>
+        </div>
+        <div class="setting-group">
+            <h3>Import/Export</h3>
+            <button id="export-data" class="primary-btn">Export Data</button>
+            <button id="import-data" class="primary-btn">Import Data</button>
+        </div>
+        <div class="setting-group">
+            <h3>Advanced Features</h3>
+            <button id="sync-browser" class="primary-btn">Sync with Browser Bookmarks</button>
+            <button id="cloud-backup" class="secondary-btn">Cloud Backup</button>
+        </div>
+        <div class="setting-group">
+            <h3>Danger Zone</h3>
+            <button id="clear-links" class="danger-btn">Clear All Links</button>
+            <p class="setting-description">This will permanently delete all links.</p>
+        </div>
+        <div class="setting-group">
+            <h3>Debug Options</h3>
+            <button id="check-links" class="primary-btn">Check Stored Links</button>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

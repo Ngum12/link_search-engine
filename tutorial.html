@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Library Tutorial</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Base styles with larger fonts */
+        body {
+            width: 100%;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-size: 16px; /* Increased base font size */
+            line-height: 1.6;
+        }
+        
+        /* Enhanced header with gradient background */
+        .tutorial-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 20px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color, #4a90e2));
+            color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .tutorial-header h1 {
+            font-size: 32px; /* Larger title */
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .tutorial-header p {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Enhanced section styling */
+        .tutorial-section {
+            margin-bottom: 35px;
+            padding: 25px;
+            border-radius: 8px;
+            background-color: var(--card-color, #f5f5f5);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+        
+        /* Larger and more prominent headings */
+        .tutorial-section h2 {
+            color: var(--primary-color);
+            font-size: 24px; /* Larger section headings */
+            margin-top: 0;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* Larger list text */
+        .tutorial-section ul, 
+        .tutorial-section ol {
+            padding-left: 25px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        
+        .tutorial-section li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+        
+        /* Enhanced tip boxes */
+        .tip-box {
+            background-color: rgba(var(--primary-color-rgb, 66, 135, 245), 0.1);
+            border-left: 6px solid var(--primary-color);
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+            font-size: 16px;
+        }
+        
+        .tip-box strong {
+            color: var(--primary-color);
+            font-size: 17px;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        /* Enhanced footer */
+        .tutorial-footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 25px;
+            background-color: var(--card-color, #f5f5f5);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+        
+        .tutorial-footer p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        /* More prominent action button */
+        .action-btn {
+            display: inline-block;
+            padding: 14px 28px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 15px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 600;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+        }
+        
+        /* Better code styling */
+        code {
+            background-color: rgba(0, 0, 0, 0.06);
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 15px;
+        }
+        
+        /* Paragraph text */
+        .tutorial-section p {
+            font-size: 16px;
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+        
+        /* Strong emphasis */
+        strong {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        /* Add visual dividers between sections */
+        .section-divider {
+            height: 3px;
+            background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+            margin: 35px 0;
+            opacity: 0.3;
+        }
+        
+        /* Dark mode adjustments */
+        .dark-mode .tutorial-section {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        
+        .dark-mode .tutorial-footer {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        
+        .dark-mode .tip-box {
+            background-color: rgba(255, 255, 255, 0.07);
+        }
+        
+        .dark-mode code {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="tutorial-header">
+        <h1>Link Library Guide</h1>
+        <p>Everything you need to know to organize your links effectively</p>
+    </div>
+    
+    <div class="tutorial-section">
+        <h2>📝 Basic Usage</h2>
+        <p>Link Library helps you organize all your important links in one place. The extension has three main tabs:</p>
+        <ul>
+            <li><strong>Browse:</strong> View and access all your links organized by category</li>
+            <li><strong>Add New:</strong> Create new links and categories</li>
+            <li><strong>Settings:</strong> Export, import, and manage your link collection</li>
+        </ul>
+        
+        <div class="tip-box">
+            <strong>Pro Tip:</strong> Use the search bar at the top to quickly find links across all categories.
+        </div>
+    </div>
+    
+    <div class="section-divider"></div>
+    
+    <div class="tutorial-section">
+        <h2>➕ Adding Links</h2>
+        <p>To add a new link:</p>
+        <ol>
+            <li>Click on the <strong>Add New</strong> tab</li>
+            <li>Enter a descriptive title (e.g., "GitHub Documentation")</li>
+            <li>Paste the complete URL (including https://)</li>
+            <li>Select a category from the dropdown or create a new one</li>
+            <li>Add a brief description of what the link contains</li>
+            <li>Add relevant tags separated by commas (e.g., "git, code, repository")</li>
+            <li>Click <strong>Add Link</strong> to save</li>
+        </ol>
+        
+        <div class="tip-box">
+            <strong>Naming Format:</strong> Use clear, descriptive titles that indicate exactly what the resource is. For example, use "MDN JavaScript Reference" rather than just "JavaScript."
+        </div>
+    </div>
+    
+    <div class="section-divider"></div>
+    
+    <div class="tutorial-section">
+        <h2>🗂️ Managing Categories</h2>
+        <p>Proper categorization makes finding links easier:</p>
+        <ul>
+            <li>Create specific categories that make sense for your workflow</li>
+            <li>Default categories include: Automation, Vision, Maps, etc.</li>
+            <li>To add a new category, go to <strong>Add New</strong> tab and use the "Add Category" section</li>
+            <li>Keep category names short but descriptive (e.g., "AI Tools" instead of just "AI")</li>
+        </ul>
+    </div>
+    
+    <div class="section-divider"></div>
+    
+    <div class="tutorial-section">
+        <h2>🏷️ Using Tags Effectively</h2>
+        <p>Tags improve searchability and organization:</p>
+        <ul>
+            <li>Add 3-5 relevant tags to each link</li>
+            <li>Use specific terms related to the link's content</li>
+            <li>Include alternative terms people might search for</li>
+            <li>Example: For a Python tutorial, use tags like "python, programming, tutorial, learning"</li>
+        </ul>
+    </div>
+    
+    <div class="section-divider"></div>
+    
+    <div class="tutorial-section">
+        <h2>🔍 Search Techniques</h2>
+        <p>Find links quickly using search:</p>
+        <ul>
+            <li>Search examines titles, descriptions, URLs, and tags</li>
+            <li>Use the category filter dropdown to narrow results to a specific category</li>
+            <li>Search results are highlighted to make matches easier to spot</li>
+        </ul>
+    </div>
+    
+    <div class="section-divider"></div>
+    
+    <div class="tutorial-section">
+        <h2>💾 Backup and Transfer</h2>
+        <p>Keep your links safe:</p>
+        <ul>
+            <li>In <strong>Settings</strong>, use "Export Data" to create a backup file</li>
+            <li>Use "Import Data" to restore from a backup or transfer to another device</li>
+            <li>"Sync with Browser Bookmarks" lets you import your existing Chrome bookmarks</li>
+            <li>Regular backups are recommended to prevent data loss</li>
+        </ul>
+    </div>
+    
+    <div class="section-divider"></div>
+    
+    <div class="tutorial-section">
+        <h2>⚙️ Advanced Features</h2>
+        <ul>
+            <li><strong>Share Links:</strong> Share important links with others</li>
+            <li><strong>Refresh Links:</strong> Update the link database if you suspect it's outdated</li>
+            <li><strong>Debug Options:</strong> Check stored links if you encounter issues</li>
+            <li><strong>Dark Mode:</strong> Toggle between light and dark themes using the switch in the header</li>
+        </ul>
+    </div>
+    
+    <div class="tutorial-footer">
+        <p>Thanks for using Link Library! We hope this tool helps keep your links organized.</p>
+        <button class="action-btn" id="close-tutorial">Return to Extension</button>
+    </div>
+    
+    <script>
+        document.getElementById('close-tutorial').addEventListener('click', function() {
+            window.close();
+        });
+        
+        // Apply dark/light theme
+        (function() {
+            chrome.storage.local.get(['darkMode'], function(result) {
+                if (result.darkMode) {
+                    document.body.classList.add('dark-mode');
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
